@@ -149,6 +149,15 @@
         .cta-section { background-color: var(--dark); color: #fff; text-align: center; }
         .cta-section h2 { color: #fff; font-size: 2.25rem; margin-bottom: 20px; }
 
+        /* 新 6.5. Workshop & Contact Info Section */
+        .workshop-section { background-color: #fff; padding: 60px 0; border-top: 1px solid #e5e7eb; }
+        .workshop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; text-align: left; }
+        .workshop-card { background: var(--gray); padding: 25px; border-radius: 8px; border-left: 4px solid var(--primary); }
+        .workshop-card h3 { font-size: 1.125rem; margin-bottom: 10px; color: var(--dark); }
+        .workshop-card p { font-size: 0.95rem; color: var(--text); margin-bottom: 0; }
+        .workshop-card a { color: var(--primary); font-weight: 600; }
+        .workshop-card a:hover { text-decoration: underline; }
+
         /* 7. Footer */
         .footer { background: #f9fafb; padding: 40px 0 20px; border-top: 1px solid #e5e7eb; }
         .footer h3 { font-size: 1rem; margin-bottom: 10px; color: var(--dark); }
@@ -222,7 +231,6 @@
             <p class="content-box">Masih ragu? Silakan pelototi sendiri dokumentasi asli tim kami di lapangan. Dari area persawahan Nganjuk hingga tambak di Mojokerto, semuanya sukses kembali ke 220V stabil!</p>
             
             <div class="masonry">
-                <!-- Data Looping Foto Di Sini (16 Foto) - Lazy Load -->
                 <div class="masonry-item"><img src="pemasangan-atd-power-nganjuk.webp" alt="Pemasangan ATD POWER Jarak Kabel 1000 M Nganjuk" loading="lazy" decoding="async"></div>
                 <div class="masonry-item"><img src="perakitan-panel-sibel-4hp.webp" alt="Perakitan Panel Sibel 4 HP 1 Phase" loading="lazy" decoding="async"></div>
                 <div class="masonry-item"><img src="tegangan-drop-150v-normal.webp" alt="Tegangan Drop 150 V Berhasil Naik 234 V" loading="lazy" decoding="async"></div>
@@ -231,7 +239,6 @@
                 <div class="masonry-item"><img src="pompa-sibel-selva-panel.webp" alt="Integrasi ATP Power Pompa Sibel Selva" loading="lazy" decoding="async"></div>
                 <div class="masonry-item"><img src="atd-power-jarak-200m.webp" alt="Pemasangan ATP Power Jarak 200 M" loading="lazy" decoding="async"></div>
                 <div class="masonry-item"><img src="panel-sibel-jombang.webp" alt="Panel SIBEL 4 HP Jarak 350 M Area Jombang" loading="lazy" decoding="async"></div>
-                <!-- Sisa 8 gambar untuk melengkapi 16 foto (Dipotong untuk efisiensi baris kode, duplikasi format di atas) -->
                 <div class="masonry-item"><img src="solusi-normalisasi-tegangan-kesamben.webp" alt="Solusi Normalisasi Tegangan Sibel Selva Podoroto" loading="lazy" decoding="async"></div>
                 <div class="masonry-item"><img src="voltase-drop-naik-272v.webp" alt="Voltase Drop 150V Naik ke 272V" loading="lazy" decoding="async"></div>
                 <div class="masonry-item"><img src="pemasangan-tambak-mojokerto.webp" alt="Pemasangan ATD Power Tambak Mojokerto" loading="lazy" decoding="async"></div>
@@ -240,7 +247,7 @@
         </div>
     </section>
 
-    <!-- 5. THE SILO HUB (Infanteri UI - Link Fisik ke WhatsApp demi CRO) -->
+    <!-- 5. THE SILO HUB -->
     <section class="section">
         <div class="container">
             <h2>Pelajari Lebih Lanjut Solusi Spesifik di Wilayah Anda</h2>
@@ -307,6 +314,27 @@
             <a href="https://wa.me/6282131111185?text=Halo%20Mas,%20saya%20mau%20pesan%20ATD%20Power%20sekarang." class="btn btn-wa">
                 Chat Tukang Rakit Sekarang - Fast Respons!
             </a>
+        </div>
+    </section>
+
+    <!-- HUBUNGI KAMI & ALAMAT WORKSHOP RESMI (HUMAN & CRAWLABILITY TRUST) -->
+    <section class="workshop-section">
+        <div class="container">
+            <h2 class="text-center">Informasi Kontak & Workshop Resmi</h2>
+            <div class="workshop-grid">
+                <div class="workshop-card">
+                    <h3>📍 Alamat Workshop</h3>
+                    <p>Dsn Mancilan Rt 5 Rw 1, Desa Mancilan, Kecamatan Mojoagung, Kab. Jombang, Jawa Timur.</p>
+                </div>
+                <div class="workshop-card">
+                    <h3>📞 Hotline Layanan</h3>
+                    <p>Hubungi WA: <a href="https://wa.me/6282131111185">0821-3111-1185</a> (Diskusi Teknis & Pemesanan Panel)</p>
+                </div>
+                <div class="workshop-card">
+                    <h3>🌐 Portal Dokumentasi</h3>
+                    <p>Website Utama: <a href="https://atdpower.blogspot.com/?m=0" target="_blank" rel="noopener">atdpower.blogspot.com</a></p>
+                </div>
+            </div>
         </div>
     </section>
 
