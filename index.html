@@ -138,7 +138,7 @@
         .masonry-item img { width: 100%; display: block; transition: transform 0.3s ease; }
         .masonry-item:hover img { transform: scale(1.05); }
 
-        /* 5. VIDEO FACADE TIKTOK (NEW) */
+        /* 5. VIDEO FACADE TIKTOK */
         .video-section { background-color: #111827; color: #fff; }
         .video-section h2 { color: #fff; margin-bottom: 15px; }
         .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 40px; }
@@ -152,10 +152,24 @@
         .tiktok-badge { position: absolute; top: 12px; right: 12px; background: var(--tiktok); color: #000; font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; z-index: 2; }
         .video-title { padding: 15px; font-size: 0.9rem; font-weight: 600; color: #fff; text-align: left; border-top: 2px solid #374151; }
 
-        /* 6. Silo Hub */
-        .silo-scroll { display: flex; overflow-x: auto; gap: 20px; padding: 20px 0; scroll-snap-type: x mandatory; scrollbar-width: none; }
-        .silo-scroll::-webkit-scrollbar { display: none; }
-        .silo-card { min-width: 280px; scroll-snap-align: start; background: #fff; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; border: 1px solid #e5e7eb; display: flex; flex-direction: column; }
+        /* 6. Silo Hub (Responsive Grid Mode) */
+        .silo-scroll { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 20px; 
+            padding: 20px 0; 
+        }
+        .silo-card { 
+            background: #fff; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+            overflow: hidden; 
+            border: 1px solid #e5e7eb; 
+            display: flex; 
+            flex-direction: column; 
+            transition: transform 0.3s ease;
+        }
+        .silo-card:hover { transform: translateY(-5px); }
         .silo-card img { width: 100%; height: 160px; object-fit: cover; }
         .silo-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
         .silo-content h3 { font-size: 1.1rem; margin-bottom: 15px; }
@@ -229,13 +243,14 @@
         </div>
     </section>
 
-    <!-- 4. SECTION GALERI PORTOFOLIO (FOTO STATIS) -->
+    <!-- 4. SECTION GALERI PORTOFOLIO (16 FOTO STATIS LENGKAP) -->
     <section class="section pain-points">
         <div class="container text-center">
             <h2>Bukti Nyata! Pemasangan Sukses ATD Power di Pelosok Jatim</h2>
             <p class="content-box">Masih ragu? Silakan pelototi sendiri dokumentasi asli tim kami di lapangan. Dari area persawahan Nganjuk hingga tambak di Mojokerto, semuanya sukses kembali ke 220V stabil!</p>
             
             <div class="masonry">
+                <!-- Baris 1-8 -->
                 <div class="masonry-item"><img src="pemasangan-atd-power-nganjuk.webp" alt="Pemasangan ATD POWER Jarak Kabel 1000 M Nganjuk" loading="lazy" decoding="async"></div>
                 <div class="masonry-item"><img src="perakitan-panel-sibel-4hp.webp" alt="Perakitan Panel Sibel 4 HP 1 Phase" loading="lazy" decoding="async"></div>
                 <div class="masonry-item"><img src="tegangan-drop-150v-normal.webp" alt="Tegangan Drop 150 V Berhasil Naik 234 V" loading="lazy" decoding="async"></div>
@@ -244,6 +259,15 @@
                 <div class="masonry-item"><img src="pompa-sibel-selva-panel.webp" alt="Integrasi ATP Power Pompa Sibel Selva" loading="lazy" decoding="async"></div>
                 <div class="masonry-item"><img src="atd-power-jarak-200m.webp" alt="Pemasangan ATP Power Jarak 200 M" loading="lazy" decoding="async"></div>
                 <div class="masonry-item"><img src="panel-sibel-jombang.webp" alt="Panel SIBEL 4 HP Jarak 350 M Area Jombang" loading="lazy" decoding="async"></div>
+                <!-- Baris 9-16 -->
+                <div class="masonry-item"><img src="solusi-normalisasi-tegangan-kesamben.webp" alt="Solusi Normalisasi Tegangan Sibel Selva Podoroto" loading="lazy" decoding="async"></div>
+                <div class="masonry-item"><img src="voltase-drop-naik-272v.webp" alt="Voltase Drop 150V Naik ke 272V" loading="lazy" decoding="async"></div>
+                <div class="masonry-item"><img src="pemasangan-tambak-mojokerto.webp" alt="Pemasangan ATD Power Tambak Mojokerto" loading="lazy" decoding="async"></div>
+                <div class="masonry-item"><img src="perakitan-workshop-mojoagung.webp" alt="Perakitan di Workshop Mojoagung Jombang" loading="lazy" decoding="async"></div>
+                <div class="masonry-item"><img src="portofolio-tambahan-1.webp" alt="Instalasi ATD Power Jatim 1" loading="lazy" decoding="async"></div>
+                <div class="masonry-item"><img src="portofolio-tambahan-2.webp" alt="Instalasi ATD Power Jatim 2" loading="lazy" decoding="async"></div>
+                <div class="masonry-item"><img src="portofolio-tambahan-3.webp" alt="Instalasi ATD Power Jatim 3" loading="lazy" decoding="async"></div>
+                <div class="masonry-item"><img src="portofolio-tambahan-4.webp" alt="Instalasi ATD Power Jatim 4" loading="lazy" decoding="async"></div>
             </div>
         </div>
     </section>
@@ -348,7 +372,7 @@
         </div>
     </section>
 
-    <!-- 6. THE SILO HUB -->
+    <!-- 6. THE SILO HUB (RESPONSIVE GRID) -->
     <section class="section">
         <div class="container">
             <h2>Pelajari Lebih Lanjut Solusi Spesifik di Wilayah Anda</h2>
@@ -386,6 +410,20 @@
                     <div class="silo-content">
                         <h3>Tukang Rakit 5500 Watt Malang</h3>
                         <a href="https://wa.me/6282131111185?text=Halo%20saya%20dari%20Malang,%20mau%20tanya%20alat%20ATD" class="btn btn-wa btn-small">Baca Selengkapnya</a>
+                    </div>
+                </div>
+                <div class="silo-card">
+                    <img src="thumb-jombang.webp" alt="Solusi Permanen Drop 125V Jombang" loading="lazy" decoding="async">
+                    <div class="silo-content">
+                        <h3>Solusi Permanen Drop 125V</h3>
+                        <a href="https://wa.me/6282131111185?text=Halo%20saya%20dari%20Jombang,%20mau%20tanya%20alat%20ATD" class="btn btn-wa btn-small">Baca Selengkapnya</a>
+                    </div>
+                </div>
+                <div class="silo-card">
+                    <img src="thumb-jatim.webp" alt="Testimoni Video Tiktok Jawa Timur" loading="lazy" decoding="async">
+                    <div class="silo-content">
+                        <h3>Testimoni Video Tiktok</h3>
+                        <a href="https://wa.me/6282131111185?text=Halo%20saya%20mau%20lihat%20bukti%20video%20ATD" class="btn btn-wa btn-small">Tonton Buktinya</a>
                     </div>
                 </div>
             </div>
