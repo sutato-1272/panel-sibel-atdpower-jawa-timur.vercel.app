@@ -7,11 +7,14 @@
     <title>Panel Sumer Sibel & ATD Power | Alat Penaik Tegangan Drop 125V</title>
     <meta name="description" content="Jual alat penaik tegangan listrik drop dari 125V. Panel Sibel wajib, ATD Power khusus tarikan kabel SR 300m - 1200m. Perakitan 1 Phase 5500 Watt untuk 4 HP.">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link rel="preload" as="image" href="alat-penaik-tegangan-listrik-pompa-sibel-jawa-timur.webp" type="image/webp">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     
     <script type="application/ld+json">
     {
@@ -82,6 +85,12 @@
         .tiktok-table tr:nth-child(even) { background-color: #0f172a; }
         .tiktok-table tr:nth-child(odd) { background-color: #1e293b; }
         .tiktok-table td, .tiktok-table th { padding: 12px 16px; border-bottom: 1px solid #334155; }
+        
+        /* 3. PROTOKOL CONTENT-VISIBILITY (Melewati render untuk section di bawah lipatan awal) */
+        .lazy-render {
+            content-visibility: auto;
+            contain-intrinsic-size: 1000px;
+        }
     </style>
 </head>
 <body class="font-body text-slate-300 antialiased bg-slate-900 selection:bg-[#facc15] selection:text-slate-900">
@@ -89,7 +98,7 @@
     <nav class="fixed w-full z-50 glass-nav border-b border-slate-800 transition-all duration-300 shadow-xl shadow-black/50">
         <div class="max-w-7xl mx-auto px-4 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="#" class="flex items-center gap-3 group flex-shrink-0">
+                <a href="#" class="flex items-center gap-3 group flex-shrink-0" aria-label="Beranda">
                     <div class="w-10 h-10 bg-gradient-to-br from-yellow-500 to-amber-700 rounded flex items-center justify-center shadow-lg shadow-amber-500/20">
                         <span class="iconify text-slate-900 w-7 h-7" data-icon="solar:bolt-bold-duotone"></span>
                     </div>
@@ -113,7 +122,7 @@
                 </div>
 
                 <div class="lg:hidden">
-                    <button class="text-white focus:outline-none">
+                    <button class="text-white focus:outline-none" aria-label="Menu">
                         <span class="iconify w-7 h-7" data-icon="lucide:menu"></span>
                     </button>
                 </div>
@@ -196,7 +205,7 @@
         </div>
     </section>
 
-    <section id="solusi" class="bg-slate-950 py-24 border-b border-slate-800">
+    <section id="solusi" class="bg-slate-950 py-24 border-b border-slate-800 lazy-render">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-yellow-500 font-bold tracking-widest uppercase text-xs mb-3 block">SPESIFIKASI PERAKITAN</span>
@@ -233,7 +242,7 @@
         </div>
     </section>
 
-    <section id="portofolio" class="bg-slate-900 py-24 border-b border-slate-800">
+    <section id="portofolio" class="bg-slate-900 py-24 border-b border-slate-800 lazy-render">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                 <div class="max-w-3xl">
@@ -352,7 +361,7 @@
         </div>
     </section>
 
-    <section id="artikel" class="bg-slate-950 py-24 border-b border-slate-800">
+    <section id="artikel" class="bg-slate-950 py-24 border-b border-slate-800 lazy-render">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <h2 class="font-heading font-bold text-2xl sm:text-3xl text-white tracking-tight mb-12 text-center">
                 Pelajari Spesifikasi Teknis ATD Power & Panel Sibel di Wilayah Anda
@@ -448,7 +457,7 @@
         </div>
     </section>
 
-    <section class="overflow-hidden bg-slate-900 pt-24 pb-24 relative border-b border-slate-800">
+    <section class="overflow-hidden bg-slate-900 pt-24 pb-24 relative border-b border-slate-800 lazy-render">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/10 blur-[150px] rounded-full pointer-events-none"></div>
         
         <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
@@ -468,7 +477,7 @@
         </div>
     </section>
 
-    <footer class="bg-slate-950 pt-16 pb-8">
+    <footer class="bg-slate-950 pt-16 pb-8 lazy-render">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
                 
