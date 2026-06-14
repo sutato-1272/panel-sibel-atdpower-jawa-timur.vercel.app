@@ -23,37 +23,65 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness", 
-      "name": "PANEL SUMER SIBEL dan ATD POWER",
-      "image": "https://panel-sibel-atdpower-jawa-timur.vercel.app/alat-penaik-tegangan-listrik-pompa-sibel-jawa-timur.webp",
-      "@id": "https://panel-sibel-atdpower-jawa-timur.vercel.app",
-      "url": "https://panel-sibel-atdpower-jawa-timur.vercel.app",
-      "telephone": "+6282131111185",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Dsn Mancilan Rt 5 Rw 1 Desa Mancilan Kecamatan Mojoagung",
-        "addressLocality": "Kabupaten Jombang",
-        "addressRegion": "Jawa Timur",
-        "postalCode": "61482",
-        "addressCountry": "ID"
-      },
-      "sameAs": [
-        "https://atdpower.blogspot.com/?m=0",
-        "https://vt.tiktok.com/ZSxSvf49d/",
-        "https://panel-sibel-atdpower-jawa-timur.vercel.app"
-      ],
-      "mainEntity": {
-        "@type": "WebPage",
-        "relatedLink": [
-          "https://dongkrakusaha.com/produk/922754/solusi-tarikan-kabel-1000-meter-nganjuk",
-          "https://dongkrakusaha.com/produk/922755/cara-mengatasi-tegangan-drop-150-v-kabel-500-m-kediri",
-          "https://dongkrakusaha.com/produk/922756/pabrik-alat-penaik-tegangan-kabel-200-m-mojokerto",
-          "https://dongkrakusaha.com/produk/922757/distributor-panel-pompa-sibel-4-hp-otomatis-surabaya",
-          "https://dongkrakusaha.com/produk/922758/spesialis-rakit-panel-sibel-1-phase-5500-watt-malang",
-          "https://dongkrakusaha.com/produk/922759/solusi-drop-125-volt-pompa-sibel-jombang",
-          "https://dongkrakusaha.com/produk/922760/testimoni-pemasangan-atd-power-jawa-timur"
-        ]
-      }
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "PANEL SUMER SIBEL dan ATD POWER",
+          "image": "https://panel-sibel-atdpower-jawa-timur.vercel.app/alat-penaik-tegangan-listrik-pompa-sibel-jawa-timur.webp",
+          "@id": "https://panel-sibel-atdpower-jawa-timur.vercel.app/#organization",
+          "url": "https://panel-sibel-atdpower-jawa-timur.vercel.app",
+          "telephone": "+6282131111185",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Dsn Mancilan Rt 5 Rw 1 Desa Mancilan Kecamatan Mojoagung",
+            "addressLocality": "Kabupaten Jombang",
+            "addressRegion": "Jawa Timur",
+            "postalCode": "61482",
+            "addressCountry": "ID"
+          },
+          "sameAs": [
+            "https://atdpower.blogspot.com/?m=0",
+            "https://vt.tiktok.com/ZSxSvf49d/"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://panel-sibel-atdpower-jawa-timur.vercel.app/#webpage",
+          "url": "https://panel-sibel-atdpower-jawa-timur.vercel.app",
+          "name": "Panel Sumer Sibel & ATD Power | Alat Penaik Tegangan Drop 125V",
+          "description": "Jual alat penaik tegangan listrik drop dari 125V. Panel Sibel wajib, ATD Power khusus tarikan kabel SR 300m - 1200m. Perakitan 1 Phase 5500 Watt untuk 4 HP.",
+          "relatedLink": [
+            "https://dongkrakusaha.com/produk/922754/solusi-tarikan-kabel-1000-meter-nganjuk",
+            "https://dongkrakusaha.com/produk/922755/cara-mengatasi-tegangan-drop-150-v-kabel-500-m-kediri",
+            "https://dongkrakusaha.com/produk/922756/pabrik-alat-penaik-tegangan-kabel-200-m-mojokerto",
+            "https://dongkrakusaha.com/produk/922757/distributor-panel-pompa-sibel-4-hp-otomatis-surabaya",
+            "https://dongkrakusaha.com/produk/922758/spesialis-rakit-panel-sibel-1-phase-5500-watt-malang",
+            "https://dongkrakusaha.com/produk/922759/solusi-drop-125-volt-pompa-sibel-jombang",
+            "https://dongkrakusaha.com/produk/922760/testimoni-pemasangan-atd-power-jawa-timur"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Mengapa tegangan listrik drop di ujung kabel panjang?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Semakin panjang kabel, semakin besar hambatan (resistansi). Alat penaik tegangan listrik kami (ATD Power) mengatasi kehilangan arus ini secara otomatis."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah ATD Power aman untuk pompa Sibel 4 HP?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sangat aman. Kami mendesain panel khusus 1 Phase 5500 Watt yang dirakit presisi menahan beban awal dinamo besar."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
 
@@ -90,10 +118,14 @@
         .tiktok-table tr:nth-child(odd) { background-color: #1e293b; }
         .tiktok-table td, .tiktok-table th { padding: 12px 16px; border-bottom: 1px solid #334155; }
 
-        /* PROTOKOL 3: LAZY RENDERING MUTLAK (Meringankan beban CPU HP di detik pertama) */
         .lazy-render {
             content-visibility: auto;
             contain-intrinsic-size: 800px;
+        }
+
+        /* PROTEKSI MOBILE: Mencegah Footer Tertutup Sticky CTA */
+        @media (max-width: 768px) {
+            body { padding-bottom: 120px !important; }
         }
     </style>
 </head>
@@ -199,356 +231,4 @@
                         <span class="iconify w-8 h-8 text-red-500 shrink-0 mt-1" data-icon="solar:danger-triangle-bold-duotone"></span>
                         <span><strong>Masalah Kabel Panjang:</strong> Pompa Sibel belum tentu butuh ATD Power. Namun, jika jarak kabel SR/Twist dari KWH meter ke titik rumah pompa membentang <strong>di atas 300 meter hingga 1200 meter</strong>, arus listrik pasti akan hilang di jalan (Tegangan Drop hingga 125 Volt) karena konduktor yang terlalu panjang.</span>
                     </p>
-                    <div class="w-full h-px bg-slate-700"></div>
-                    <p class="flex items-start gap-4">
-                        <span class="iconify w-8 h-8 text-yellow-500 shrink-0 mt-1" data-icon="solar:bolt-circle-bold-duotone"></span>
-                        <span><strong>Fungsi Utama ATD Power:</strong> Alat ini khusus kami rakit untuk MENAIKKAN TEGANGAN LISTRIK yang drop tersebut kembali normal, sehingga dinamo pompa Sibel Anda tidak kerja paksa dan terhindar dari risiko gosong/terbakar.</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="solusi" class="bg-slate-950 py-24 border-b border-slate-800 lazy-render">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-yellow-500 font-bold tracking-widest uppercase text-xs mb-3 block">SPESIFIKASI PERAKITAN</span>
-                <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white tracking-tight mb-4 leading-tight">
-                    Mengapa Pemborong Jawa Timur Percaya Rakitan ATD Power Kami?
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-slate-900 p-8 rounded-2xl shadow-xl border border-slate-800 hover:border-yellow-500/50 transition-all duration-300">
-                    <div class="w-14 h-14 rounded-xl bg-yellow-500/10 flex items-center justify-center mb-6 text-yellow-500">
-                        <span class="iconify w-8 h-8" data-icon="solar:ruler-angular-bold-duotone"></span>
-                    </div>
-                    <h3 class="font-heading font-bold text-xl text-white mb-3">Spesialis Jarak Ekstrem</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">Melayani pesanan ATD Power untuk Sibel dengan jarak tarikan kabel 300m - 1200m dari KWH meter. Arus yang hilang di jalan bukan lagi masalah.</p>
-                </div>
-
-                <div class="bg-slate-900 p-8 rounded-2xl shadow-xl border border-slate-800 hover:border-yellow-500/50 transition-all duration-300">
-                    <div class="w-14 h-14 rounded-xl bg-yellow-500/10 flex items-center justify-center mb-6 text-yellow-500">
-                        <span class="iconify w-8 h-8" data-icon="solar:settings-bold-duotone"></span>
-                    </div>
-                    <h3 class="font-heading font-bold text-xl text-white mb-3">Spesifikasi Kelas Dewa</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">Perakitan Panel Sibel untuk 4 HP Listrik. Format 1 Phase + Timer & ATD Power (1 Phase 5500 Watt). Komponen kuat, dinamo aman sentosa.</p>
-                </div>
-
-                <div class="bg-slate-900 p-8 rounded-2xl shadow-xl border border-slate-800 hover:border-yellow-500/50 transition-all duration-300">
-                    <div class="w-14 h-14 rounded-xl bg-yellow-500/10 flex items-center justify-center mb-6 text-yellow-500">
-                        <span class="iconify w-8 h-8" data-icon="solar:map-point-bold-duotone"></span>
-                    </div>
-                    <h3 class="font-heading font-bold text-xl text-white mb-3">Kirim Seluruh Jawa Timur</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">Workshop kami berada di Mojoagung, Jombang. Kami melayani pesanan dan pengiriman aman untuk seluruh kota dan kabupaten di wilayah Jawa Timur.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portofolio" class="bg-slate-900 py-24 border-b border-slate-800 lazy-render">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                <div class="max-w-3xl">
-                    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white tracking-tight mb-4">Bukti Nyata Pemasangan Sukses ATD Power di Pelosok Jatim</h2>
-                    <p class="text-slate-400 text-sm leading-relaxed">Jangan biarkan tegangan drop merusak pompa Anda. Silakan lihat sendiri dokumentasi pemasangan tim kami di lapangan. Dari Nganjuk hingga Mojokerto, semuanya sukses tegangan normal!</p>
-                </div>
-            </div>
-
-            <div class="overflow-x-auto bg-slate-800 rounded-xl border border-slate-700 shadow-2xl mb-16">
-                <table class="w-full text-left border-collapse tiktok-table text-sm min-w-[600px]">
-                    <thead>
-                        <tr>
-                            <th class="w-16 text-center">No.</th>
-                            <th>Deskripsi Pekerjaan & Titik Masalah</th>
-                            <th class="text-center">Link Video (Bukti)</th>
-                            <th class="text-center w-32">Platform</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-slate-300">
-                        <tr>
-                            <td class="text-center font-mono">1</td>
-                            <td class="font-semibold">Pemasangan ATD POWER Jarak Kabel 1000 M dari KWH Meter</td>
-                            <td class="text-center"><a href="https://vt.tiktok.com/ZSUgvX3Rh/" target="_blank" rel="noopener noreferrer" class="text-brand-sky hover:text-white underline">Tonton Bukti</a></td>
-                            <td class="text-center"><span class="bg-black text-white px-2 py-1 rounded text-xs font-bold flex items-center justify-center gap-1 w-max mx-auto"><span class="iconify" data-icon="logos:tiktok-icon"></span> TikTok</span></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center font-mono">2</td>
-                            <td class="font-semibold">Jarak KWH meter 720 M, Tegangan Drop 150 V, Naik Jadi 234 V (Normal)</td>
-                            <td class="text-center"><a href="https://vt.tiktok.com/ZSUpw72qA/" target="_blank" rel="noopener noreferrer" class="text-brand-sky hover:text-white underline">Tonton Bukti</a></td>
-                            <td class="text-center"><span class="bg-black text-white px-2 py-1 rounded text-xs font-bold flex items-center justify-center gap-1 w-max mx-auto"><span class="iconify" data-icon="logos:tiktok-icon"></span> TikTok</span></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center font-mono">3</td>
-                            <td class="font-semibold">Pemasangan ATD POWER Jarak Kabel 210 M dari KWH Meter</td>
-                            <td class="text-center"><a href="https://vt.tiktok.com/ZSUgc8B79/" target="_blank" rel="noopener noreferrer" class="text-brand-sky hover:text-white underline">Tonton Bukti</a></td>
-                            <td class="text-center"><span class="bg-black text-white px-2 py-1 rounded text-xs font-bold flex items-center justify-center gap-1 w-max mx-auto"><span class="iconify" data-icon="logos:tiktok-icon"></span> TikTok</span></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center font-mono">4</td>
-                            <td class="font-semibold">Pemasangan ATP Power Jarak 200 m dari KWH Meter</td>
-                            <td class="text-center"><a href="https://vt.tiktok.com/ZSUgv9Gya/" target="_blank" rel="noopener noreferrer" class="text-brand-sky hover:text-white underline">Tonton Bukti</a></td>
-                            <td class="text-center"><span class="bg-black text-white px-2 py-1 rounded text-xs font-bold flex items-center justify-center gap-1 w-max mx-auto"><span class="iconify" data-icon="logos:tiktok-icon"></span> TikTok</span></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center font-mono">5</td>
-                            <td class="font-semibold">Pompa Celup SELVA Lokasi Podoroto Kesamben-Jombang</td>
-                            <td class="text-center"><a href="https://vt.tiktok.com/ZSUW5GAJq/" target="_blank" rel="noopener noreferrer" class="text-brand-sky hover:text-white underline">Tonton Bukti</a></td>
-                            <td class="text-center"><span class="bg-black text-white px-2 py-1 rounded text-xs font-bold flex items-center justify-center gap-1 w-max mx-auto"><span class="iconify" data-icon="logos:tiktok-icon"></span> TikTok</span></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center font-mono">6</td>
-                            <td class="font-semibold text-yellow-400">🔥 Panel SIBEL 4 HP 1 Phase + ATD Power (Jarak 350 M - Jombang)</td>
-                            <td class="text-center"><a href="https://vt.tiktok.com/ZSyAJT3HY/" target="_blank" rel="noopener noreferrer" class="text-brand-sky hover:text-white underline font-bold">Tonton Spesial</a></td>
-                            <td class="text-center"><span class="bg-black text-white px-2 py-1 rounded text-xs font-bold flex items-center justify-center gap-1 w-max mx-auto"><span class="iconify" data-icon="logos:tiktok-icon"></span> TikTok</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="pemasangan-atd-power-nganjuk.webp" loading="lazy" decoding="async" alt="Pemasangan ATD Power Nganjuk" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="perakitan-panel-sibel-4hp.webp" loading="lazy" decoding="async" alt="Perakitan Panel Sibel 4HP" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="tegangan-drop-150v-normal.webp" loading="lazy" decoding="async" alt="Tegangan Drop 150V Normal" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="panel-sibel-2hp-atd-power.webp" loading="lazy" decoding="async" alt="Panel Sibel 2HP ATD Power" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="atd-power-jarak-210m.webp" loading="lazy" decoding="async" alt="ATD Power Jarak 210m" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="pompa-sibel-selva-panel.webp" loading="lazy" decoding="async" alt="Pompa Sibel Selva Panel" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="atd-power-jarak-200m.webp" loading="lazy" decoding="async" alt="ATD Power Jarak 200m" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="panel-sibel-jombang.webp" loading="lazy" decoding="async" alt="Panel Sibel Jombang" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="solusi-normalisasi-tegangan-kesamben.webp" loading="lazy" decoding="async" alt="Solusi Normalisasi Tegangan Kesamben" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="voltase-drop-naik-272v.webp" loading="lazy" decoding="async" alt="Voltase Drop Naik 272V" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="pemasangan-tambak-mojokerto.webp" loading="lazy" decoding="async" alt="Pemasangan Tambak Mojokerto" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="perakitan-workshop-mojoagung.webp" loading="lazy" decoding="async" alt="Perakitan Workshop Mojoagung" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="cegah-dinamo-pompa-terbakar-akibat-kurang-arus.webp" loading="lazy" decoding="async" alt="Cegah Dinamo Pompa Terbakar Akibat Kurang Arus" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="instalasi-panel-listrik-1-phase-5500-watt.webp" loading="lazy" decoding="async" alt="Instalasi Panel Listrik 1 Phase 5500 Watt" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="semburan-air-deras-pompa-sibel-stabil.webp" loading="lazy" decoding="async" alt="Semburan Air Deras Pompa Sibel Stabil" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg bg-black aspect-square shadow-xl border border-slate-700 p-1 flex items-center justify-center">
-                    <img src="solusi-kabel-210-meter-tegangan-normal.webp" loading="lazy" decoding="async" alt="Solusi Kabel 210 Meter Tegangan Normal" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-            </div>
-            
-            <div class="mt-10 text-center">
-                <a href="https://wa.me/6282131111185?text=Halo,%20saya%20mau%20pesan%20dan%20konsultasi%20setelah%20melihat%20portofolio%20ATD%20Power." class="inline-flex items-center text-yellow-500 font-bold text-sm hover:text-white transition-colors">
-                    Diskusi Teknis Bersama Tukang Rakit <span class="iconify ml-1" data-icon="lucide:arrow-right"></span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="artikel" class="bg-slate-950 py-24 border-b border-slate-800 lazy-render">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <h2 class="font-heading font-bold text-2xl sm:text-3xl text-white tracking-tight mb-12 text-center">
-                Pelajari Spesifikasi Teknis ATD Power & Panel Sibel di Wilayah Anda
-            </h2>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                
-                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-yellow-500/50 transition-colors group shadow-xl flex flex-col">
-                    <div class="h-72 bg-black relative overflow-hidden shrink-0 flex items-center justify-center p-2">
-                        <img src="solusi-tarikan-kabel-1000-meter-nganjuk.webp" loading="lazy" decoding="async" alt="Solusi Tarikan Kabel Sibel 1000 Meter Nganjuk" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0">
-                        <div class="absolute bottom-2 left-2 bg-black/80 px-2 py-1 rounded text-[10px] text-white uppercase font-bold tracking-widest border border-slate-700">Nganjuk</div>
-                    </div>
-                    <div class="p-5 flex flex-col flex-1">
-                        <h3 class="font-bold text-white text-sm mb-2">Jarak Kabel SR 300m - 1200m?</h3>
-                        <p class="text-xs text-slate-400 mb-4 leading-relaxed">Kehilangan arus rentan terjadi. ATD Power didesain menaikkan tegangan yang drop akibat tarikan ekstrem.</p>
-                        <a href="https://dongkrakusaha.com/produk/922754/solusi-tarikan-kabel-1000-meter-nganjuk" class="text-yellow-500 text-xs font-bold uppercase hover:text-white transition-colors flex items-center gap-1 mt-auto">Detail Alat &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-yellow-500/50 transition-colors group shadow-xl flex flex-col">
-                    <div class="h-72 bg-black relative overflow-hidden shrink-0 flex items-center justify-center p-2">
-                        <img src="cara-mengatasi-tegangan-drop-150v-kediri.webp" loading="lazy" decoding="async" alt="Cara Mengatasi Tegangan Drop 125V Kediri" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0">
-                        <div class="absolute bottom-2 left-2 bg-black/80 px-2 py-1 rounded text-[10px] text-white uppercase font-bold tracking-widest border border-slate-700">Kediri</div>
-                    </div>
-                    <div class="p-5 flex flex-col flex-1">
-                        <h3 class="font-bold text-white text-sm mb-2">Alat Penaik Tegangan Drop 125V</h3>
-                        <p class="text-xs text-slate-400 mb-4 leading-relaxed">Mengembalikan tegangan listrik yang drop dari 125 volt menjadi stabil 220V+ demi keamanan pompa Anda.</p>
-                        <a href="https://dongkrakusaha.com/produk/922755/cara-mengatasi-tegangan-drop-150-v-kabel-500-m-kediri" class="text-yellow-500 text-xs font-bold uppercase hover:text-white transition-colors flex items-center gap-1 mt-auto">Cegah Dinamo Gosong &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-yellow-500/50 transition-colors group shadow-xl flex flex-col">
-                    <div class="h-72 bg-black relative overflow-hidden shrink-0 flex items-center justify-center p-2">
-                        <img src="pabrik-alat-penaik-tegangan-listrik-mojokerto.webp" loading="lazy" decoding="async" alt="Pabrik Alat Penaik Tegangan Listrik Mojokerto" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0">
-                        <div class="absolute bottom-2 left-2 bg-black/80 px-2 py-1 rounded text-[10px] text-white uppercase font-bold tracking-widest border border-slate-700">Mojokerto</div>
-                    </div>
-                    <div class="p-5 flex flex-col flex-1">
-                        <h3 class="font-bold text-white text-sm mb-2">Sibel Wajib Panel, Butuh ATD?</h3>
-                        <p class="text-xs text-slate-400 mb-4 leading-relaxed">Pompa Sibel WAJIB pakai Panel. Namun ATD Power hanya dibutuhkan bila jarak kabel panjang 300m - 1200m.</p>
-                        <a href="https://dongkrakusaha.com/produk/922756/pabrik-alat-penaik-tegangan-kabel-200-m-mojokerto" class="text-yellow-500 text-xs font-bold uppercase hover:text-white transition-colors flex items-center gap-1 mt-auto">Cek Spesifikasi &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-yellow-500/50 transition-colors group shadow-xl flex flex-col">
-                    <div class="h-72 bg-black relative overflow-hidden shrink-0 flex items-center justify-center p-2">
-                        <img src="distributor-panel-pompa-sibel-4-hp-surabaya.webp" loading="lazy" decoding="async" alt="Distributor Panel Pompa Sibel 4 HP Surabaya" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0">
-                        <div class="absolute bottom-2 left-2 bg-black/80 px-2 py-1 rounded text-[10px] text-white uppercase font-bold tracking-widest border border-slate-700">Surabaya</div>
-                    </div>
-                    <div class="p-5 flex flex-col flex-1">
-                        <h3 class="font-bold text-white text-sm mb-2">Perakitan Panel Sibel 4 HP</h3>
-                        <p class="text-xs text-slate-400 mb-4 leading-relaxed">Melayani perakitan Panel Sibel (1 Phase + Timer) & ATD Power (5500 Watt) untuk kinerja Sibel maksimal.</p>
-                        <a href="https://dongkrakusaha.com/produk/922757/distributor-panel-pompa-sibel-4-hp-otomatis-surabaya" class="text-yellow-500 text-xs font-bold uppercase hover:text-white transition-colors flex items-center gap-1 mt-auto">Pesan Rakitan &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-yellow-500/50 transition-colors group shadow-xl flex flex-col">
-                    <div class="h-72 bg-black relative overflow-hidden shrink-0 flex items-center justify-center p-2">
-                        <img src="spesialis-rakit-panel-sibel-1-phase-malang.webp" loading="lazy" decoding="async" alt="Spesialis Rakit Panel Sibel 1 Phase Malang" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0">
-                        <div class="absolute bottom-2 left-2 bg-black/80 px-2 py-1 rounded text-[10px] text-white uppercase font-bold tracking-widest border border-slate-700">Malang</div>
-                    </div>
-                    <div class="p-5 flex flex-col flex-1">
-                        <h3 class="font-bold text-white text-sm mb-2">Solusi Konduktor Terlalu Panjang</h3>
-                        <p class="text-xs text-slate-400 mb-4 leading-relaxed">Mengatasi hambatan dan hilangnya arus pada kabel SR/Twist. Solusi tepat 1 Phase 5500 Watt.</p>
-                        <a href="https://dongkrakusaha.com/produk/922758/spesialis-rakit-panel-sibel-1-phase-5500-watt-malang" class="text-yellow-500 text-xs font-bold uppercase hover:text-white transition-colors flex items-center gap-1 mt-auto">Solusi Drop Tegangan &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-yellow-500/50 transition-colors group shadow-xl flex flex-col">
-                    <div class="h-72 bg-black relative overflow-hidden shrink-0 flex items-center justify-center p-2">
-                        <img src="solusi-drop-125-volt-pompa-sibel-jombang.webp" loading="lazy" decoding="async" alt="Solusi Drop 125 Volt Pompa Sibel Jombang" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0">
-                        <div class="absolute bottom-2 left-2 bg-black/80 px-2 py-1 rounded text-[10px] text-white uppercase font-bold tracking-widest border border-slate-700">Jombang</div>
-                    </div>
-                    <div class="p-5 flex flex-col flex-1">
-                        <h3 class="font-bold text-white text-sm mb-2">Pabrik & Workshop Jombang</h3>
-                        <p class="text-xs text-slate-400 mb-4 leading-relaxed">Produksi ATD Power kami berpusat di Mojoagung, Jombang. Didesain kuat menahan beban awal dinamo besar.</p>
-                        <a href="https://dongkrakusaha.com/produk/922759/solusi-drop-125-volt-pompa-sibel-jombang" class="text-yellow-500 text-xs font-bold uppercase hover:text-white transition-colors flex items-center gap-1 mt-auto">Kunjungi Kami &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-yellow-500/50 transition-colors group shadow-xl flex flex-col sm:col-span-2 lg:col-span-1 xl:col-span-1">
-                    <div class="h-72 bg-black relative overflow-hidden shrink-0 flex items-center justify-center p-2">
-                        <img src="testimoni-pemasangan-atd-power-jawa-timur.webp" loading="lazy" decoding="async" alt="Testimoni Pemasangan ATD Power Jawa Timur" class="max-w-full max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0">
-                        <div class="absolute bottom-2 left-2 bg-black/80 px-2 py-1 rounded text-[10px] text-white uppercase font-bold tracking-widest border border-slate-700">Jawa Timur</div>
-                    </div>
-                    <div class="p-5 flex flex-col flex-1">
-                        <h3 class="font-bold text-white text-sm mb-2">Siap Kirim Seluruh Jatim</h3>
-                        <p class="text-xs text-slate-400 mb-4 leading-relaxed">Melayani pesanan ATD Power dan Panel Sibel. Pemasangan aman, siap kirim ke seluruh kota Jawa Timur.</p>
-                        <a href="https://dongkrakusaha.com/produk/922760/testimoni-pemasangan-atd-power-jawa-timur" class="text-yellow-500 text-xs font-bold uppercase hover:text-white transition-colors flex items-center gap-1 mt-auto">Pesan Sekarang &rarr;</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="overflow-hidden bg-slate-900 pt-24 pb-24 relative border-b border-slate-800 lazy-render">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/10 blur-[150px] rounded-full pointer-events-none"></div>
-        
-        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
-            <h2 class="font-heading font-black text-3xl md:text-5xl tracking-tight mb-6 leading-tight text-white uppercase">
-                Pompa Anda Adalah Nyawa Bisnis Anda. <span class="text-red-500">Amankan Sekarang!</span>
-            </h2>
-            <p class="text-slate-300 text-lg mb-12 font-medium max-w-2xl mx-auto">
-                Setiap jam Anda menunda, risiko dinamo terbakar semakin besar akibat kekurangan arus. Konsultasikan jarak kabel dan kapasitas pompa Anda kepada ahlinya hari ini juga. Gratis diskusi teknis!
-            </p>
-            
-            <div class="flex justify-center">
-                <a href="https://wa.me/6282131111185?text=Halo%20ATD%20Power,%20saya%20mau%20konsultasi%20kapasitas%20pompa%20dan%20jarak%20kabel%20saya." class="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-10 py-6 rounded-2xl font-black text-lg sm:text-xl uppercase tracking-wider transition-all hover:scale-105 shadow-[0_0_40px_rgba(37,211,102,0.4)] flex items-center justify-center gap-3 animate-vibrate border-4 border-[#25D366]">
-                    <span class="iconify w-8 h-8" data-icon="logos:whatsapp-icon"></span>
-                    Chat Tukang Rakit Sekarang - Fast Respons!
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-slate-950 pt-16 pb-8 lazy-render">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
-                
-                <div class="lg:col-span-4 flex flex-col gap-6">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-yellow-500 rounded flex items-center justify-center">
-                            <span class="iconify text-slate-900 w-6 h-6" data-icon="solar:bolt-bold-duotone"></span>
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="font-heading font-black text-lg text-white uppercase leading-none">PANEL SUMER SIBEL</span>
-                            <span class="font-body text-[0.65rem] font-bold text-yellow-400 tracking-[0.2em] leading-tight mt-1 uppercase">& ATD POWER</span>
-                        </div>
-                    </div>
-                    <p class="text-sm text-slate-400 font-medium">Jual alat untuk MENAIKKAN TEGANGAN LISTRIK yang drop dari 125 volt akibat tarikan jarak jauh. Siap kirim seluruh Jawa Timur.</p>
-                    <ul class="space-y-3 text-sm text-slate-400 mt-2">
-                        <li class="flex items-start gap-2">
-                            <span class="iconify w-5 h-5 text-red-500 shrink-0 mt-0.5" data-icon="lucide:map-pin"></span>
-                            <span>Workshop: Dsn Mancilan Rt 5 Rw 1 Ds. Mancilan, Kec. Mojoagung, Kab. Jombang, Jatim</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="iconify w-5 h-5 text-red-500" data-icon="lucide:phone"></span>
-                            <span class="font-bold text-white">0821-3111-1185</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="iconify w-5 h-5 text-red-500" data-icon="lucide:globe"></span>
-                            <a href="https://atdpower.blogspot.com/?m=0" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition-colors underline">atdpower.blogspot.com</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="lg:col-span-4 flex flex-col gap-4">
-                    <h3 class="text-white font-bold text-sm tracking-wide border-l-4 border-yellow-500 pl-3">Pencarian Terkait (Tags)</h3>
-                    <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-slate-800 text-slate-300 px-3 py-1.5 rounded border border-slate-700">alat penaik tegangan listrik</span>
-                        <span class="bg-slate-800 text-slate-300 px-3 py-1.5 rounded border border-slate-700">solusi tegangan drop ekstrem</span>
-                        <span class="bg-slate-800 text-slate-300 px-3 py-1.5 rounded border border-slate-700">pabrik ATD power 1 phase</span>
-                        <span class="bg-slate-800 text-slate-300 px-3 py-1.5 rounded border border-slate-700">pompa sibel selva</span>
-                        <span class="bg-slate-800 text-slate-300 px-3 py-1.5 rounded border border-slate-700">tukang rakit panel sibel kustom</span>
-                        <span class="bg-slate-800 text-slate-300 px-3 py-1.5 rounded border border-slate-700">atasi voltase naik turun</span>
-                        <span class="bg-slate-800 text-slate-300 px-3 py-1.5 rounded border border-slate-700">pemborong pompa surabaya</span>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-4 flex flex-col gap-4">
-                    <h3 class="text-white font-bold text-sm tracking-wide border-l-4 border-yellow-500 pl-3">FAQ Singkat</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <p class="text-xs font-bold text-white mb-1">Q: Mengapa tegangan listrik drop di ujung kabel panjang?</p>
-                            <p class="text-xs text-slate-400">A: Semakin panjang kabel, semakin besar hambatan (resistansi). Alat penaik tegangan listrik kami (ATD Power) mengatasi kehilangan arus ini secara otomatis.</p>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-white mb-1">Q: Apakah ATD Power aman untuk pompa Sibel 4 HP?</p>
-                            <p class="text-xs text-slate-400">A: Sangat aman. Kami mendesain panel khusus 1 Phase 5500 Watt yang dirakit presisi menahan beban awal dinamo besar.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            
-            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-                <p>© 2026 Panel Sumer Sibel & ATD Power. All rights reserved.</p>
-                <p class="md:mt-0 mt-4 uppercase tracking-widest text-slate-600 hover:text-slate-400 transition-colors font-mono">
-                    <a href="https://ciledugpromo.biz.id/" target="_blank" rel="nofollow noopener noreferrer">SEO & Web Development by CiledugPromo</a>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+                    <div class="w-full
